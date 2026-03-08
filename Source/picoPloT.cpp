@@ -31,7 +31,7 @@ static hw::TempSense temp_sensor;
 // --- USB ---------------------------------------------------------------------
 
 static hw::FilePortal file_portal{"picoPlot",
-                                  "https://github.com/AnotherJohnH/picoPlot"};
+                                  "https://github.com/SloeComputers/picoPlot"};
 
 static hw::UsbFile    usb{0x91C0, "picoPlot", file_portal};
 
@@ -94,8 +94,8 @@ int main()
 
    temp_sensor.start();
 
-   rtc.setDate(2025, 1, 13);
-   rtc.setTime(8, 25, 0, 1);
+   rtc.setDate(2025, 12, 27);
+   rtc.setTime(15, 8, 0, 6);
    rtc.start();
 
    Display<WIDTH,HEIGHT> display(canvas);

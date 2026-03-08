@@ -4,7 +4,7 @@ Raspberry Pi Pico temperature recorder with a rolling plot on E-Paper display.
 
 ## Software dependencies
 
-+ https://github.com/AnotherJohnH/Platform
++ https://github.com/SloeComputers/Platform
 + arm-none-eabi-gcc
 + cmake
 + ninja (make works too)
@@ -18,15 +18,15 @@ Working
 
 ## Hardware information
 
-![prototype](https://github.com/AnotherJohnH/Hardware/blob/main/picoSense/docs/breadboard_v0.01.jpg)
+![prototype](https://github.com/SloeComputers/Hardware/blob/main/picoSense/docs/breadboard_v0.01.jpg)
 
-For more information on the circuit above see the [schematic](https://github.com/AnotherJohnH/Hardware/blob/main/picoSense/docs/schematic_v0.01.pdf)
+For more information on the circuit above see the [schematic](https://github.com/SloeComputers/Hardware/blob/main/picoSense/docs/schematic_v0.01.pdf)
 
 Also builds for the pimoroni badger 2040...
 
-![badger 2040](https://github.com/AnotherJohnH/Hardware/blob/main/picoSense/docs/badger_2040.jpg)
+![badger 2040](https://github.com/SloeComputers/Hardware/blob/main/picoSense/docs/badger_2040.jpg)
 
-See [README](https://github.com/AnotherJohnH/Hardware/blob/main/picoSense/README.md) for more information.
+See [README](https://github.com/SloeComputers/Hardware/blob/main/picoSense/README.md) for more information.
 
 ## Software build
 
@@ -35,15 +35,15 @@ See [README](https://github.com/AnotherJohnH/Hardware/blob/main/picoSense/README
 This repo uses git sub-modules, so checkout using --recurse to clone all the
 dependent source...
 
-    git clone --recurse https://github.com/AnotherJohnH/picoPloT.git
+    git clone --recurse https://github.com/SloeComputers/picoPloT.git
 
 or
 
-    git clone --recurse ssh://git@github.com/AnotherJohnH/picoPloT.git
+    git clone --recurse ssh://git@github.com/SloeComputers/picoPloT.git
 
 ### Set date and time
 
-The date and time at reset is hard coded in [picoPlot_rpipipico.cpp](https://github.com/AnotherJohnH/picoPloT/blob/main/Source/picoPloT_rpipico.cpp)
+The date and time at reset is hard coded in [picoPlot_rpipipico.cpp](https://github.com/SloeComputers/picoPloT/blob/main/Source/picoPloT_rpipico.cpp)
 
 In the future this could be improved by...
 + Provide a UART interface for data/time setting
