@@ -11,7 +11,7 @@ project(picoPloT
 
 include(CTest)
 
-set(HARDWARE picoSense)
+set(HWR_CONFIG picoSense)
 
-add_subdirectory(Platform/Hardware)
+add_subdirectory(Platform)
 add_subdirectory(Source)

@@ -7,8 +7,8 @@
 
 #include <cstdio>
 
-#include "Hardware/picoSense/Config.h"
-#include "Hardware/FilePortal.h"
+#include "HWR/picoSense/Config.h"
+#include "HWR/FilePortal.h"
 
 #include "Display.h"
 
@@ -94,8 +94,8 @@ int main()
 
    temp_sensor.start();
 
-   rtc.setDate(2025, 12, 27);
-   rtc.setTime(15, 8, 0, 6);
+   rtc.setDate(2026, 3, 8);
+   rtc.setTime(17, 5, 0, 0);
    rtc.start();
 
    Display<WIDTH,HEIGHT> display(canvas);
