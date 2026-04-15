@@ -13,5 +13,5 @@ include(CTest)
 
 set(HWR_CONFIG picoSense)
 
-add_subdirectory(Platform)
+add_subdirectory(PDK)
 add_subdirectory(Source)

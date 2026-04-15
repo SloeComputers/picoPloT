@@ -4,7 +4,7 @@ Raspberry Pi Pico temperature recorder with a rolling plot on E-Paper display.
 
 ## Software dependencies
 
-+ https://github.com/SloeComputers/Platform
++ https://github.com/SloeComputers/PDK
 + arm-none-eabi-gcc
 + cmake
 + ninja (make works too)
@@ -61,7 +61,7 @@ Build directly using cmake...
 
     mkdir build
     cd build
-    cmake -DCMAKE_BUILD_TYPE=Release -DPLT_TARGET=rpipico -DCMAKE_TOOLCHAIN_FILE=Platform/MTL/rpipico/toolchain.cmake ..
+    cmake -DCMAKE_BUILD_TYPE=Release -DPLT_TARGET=rpipico -DCMAKE_TOOLCHAIN_FILE=PDK/MTL/rpipico/toolchain.cmake ..
     make
 
 Flashable images will be found under the build sub directory here...
