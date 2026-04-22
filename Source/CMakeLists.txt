@@ -3,4 +3,4 @@
 # SPDX-License-Identifier: MIT
 #-------------------------------------------------------------------------------
 
-add_picoSense_executable(picoPlot picoPlot.cpp)
+add_picoSense_executable(picoPlot picoPloT.cpp)
