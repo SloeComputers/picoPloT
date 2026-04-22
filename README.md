@@ -14,6 +14,8 @@ Both Pico and native targets should build on MacOS or Linux.
 
 ## Status
 
+[![Build Status](https://github.com/SloeComputers/picoPloT/actions/workflows/build_on_push.yml/badge.svg)](https://github.com/SloeComputers/picoPloT/actions/workflows/build_on_push.yml)
+
 Working
 
 ## Hardware information

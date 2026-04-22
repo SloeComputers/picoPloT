@@ -1,4 +1,5 @@
 theme: jekyll-theme-slate
-title: picoPlot
-description: A Sloe Computers Project
-exclude: PDK
+title: picoPloT
+description: A SloeComputers Project
+exclude:
+   - PDK

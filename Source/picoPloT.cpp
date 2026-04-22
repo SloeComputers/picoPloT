@@ -16,38 +16,38 @@
 
 // --- E-PAPER -----------------------------------------------------------------
 
-constexpr unsigned WIDTH  = hw::Display::getWidth();
-constexpr unsigned HEIGHT = hw::Display::getHeight();
+constexpr unsigned WIDTH  = HWR::Display::getWidth();
+constexpr unsigned HEIGHT = HWR::Display::getHeight();
 
-hw::Display                display;
-static hw::Display::Canvas canvas;
+HWR::Display                display;
+static HWR::Display::Canvas canvas;
 
 
 // --- SENSRO ------------------------------------------------------------------
 
-static hw::TempSense temp_sensor;
+static HWR::TempSense temp_sensor;
 
 
 // --- USB ---------------------------------------------------------------------
 
-static hw::FilePortal file_portal{"picoPlot",
+static HWR::FilePortal file_portal{"picoPlot",
                                   "https://github.com/SloeComputers/picoPlot"};
 
-static hw::UsbFile    usb{0x91C0, "picoPlot", file_portal};
+static HWR::UsbFile    usb{0x91C0, "picoPlot", file_portal};
 
 extern "C" void IRQ_USBCTRL() { usb.irq(); }
 
 
 // --- RTC ---------------------------------------------------------------------
 
-static hw::Rtc rtc;
+static HWR::Rtc rtc;
 
 extern "C" void IRQ_RTC() { rtc.irq(); }
 
 
 // --- BUTTONS -----------------------------------------------------------------
 
-static hw::Buttons buttons{/* enable IRQ */ true};
+static HWR::Buttons buttons{/* enable IRQ */ true};
 
 extern "C" void IRQ_IO_BANK0() { buttons.irq(); }
 
