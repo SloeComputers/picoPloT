@@ -63,7 +63,7 @@ Build directly using cmake...
 
     mkdir build
     cd build
-    cmake -DCMAKE_BUILD_TYPE=Release -DPLT_TARGET=rpipico -DCMAKE_TOOLCHAIN_FILE=PDK/MTL/rpipico/toolchain.cmake ..
+    cmake .. -DCMAKE_TOOLCHAIN_FILE=PDK/TGT/rp2040/toolchain.cmake
     make
 
 Flashable images will be found under the build sub directory here...
