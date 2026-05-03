@@ -23,7 +23,7 @@ HWR::Display                display;
 static HWR::Display::Canvas canvas;
 
 
-// --- SENSRO ------------------------------------------------------------------
+// --- SENSOR ------------------------------------------------------------------
 
 static HWR::TempSense temp_sensor;
 

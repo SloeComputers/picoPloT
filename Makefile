@@ -1,4 +1,4 @@
 
-all: rp2040 rp2350 native
+all: rp2040 native
 
 include PDK/build.make
