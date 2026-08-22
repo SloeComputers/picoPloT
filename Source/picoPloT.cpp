@@ -31,7 +31,7 @@ static HWR::TempSense temp_sensor;
 // --- USB ---------------------------------------------------------------------
 
 static HWR::FilePortal file_portal{"picoPlot",
-                                  "https://github.com/SloeComputers/picoPlot"};
+                                   "https://github.com/SloeComputers/picoPlot"};
 
 static HWR::UsbFile    usb{0x91C0, "picoPlot", file_portal};
 

@@ -9,10 +9,10 @@
 
 #include <cstdio>
 
-#include "GUI/Font/Teletext.h"
 #include "GUI/Canvas.h"
+#include "GUI/Font/Teletext.h"
 
-#include "Scale.h"
+#include "Axis.h"
 #include "History.h"
 
 template <unsigned WIDTH, unsigned HEIGHT>
@@ -28,7 +28,7 @@ public:
    //! Update the current day of the week and day of the month
    void setDay(unsigned dow_, unsigned dom_)
    {
-      if (dow_ != cur_dow)
+      if(dow_ != cur_dow)
       {
          new_day = true;
       }
@@ -272,7 +272,7 @@ private:
          unsigned x = time_scale.getPos(-mins_in_past);
          unsigned tick_len;
 
-         if ((tick_time % 180) == 0)
+         if((tick_time % 180) == 0)
          {
             tick_len = 3;
 
@@ -280,7 +280,7 @@ private:
             snprintf(text, sizeof(text), "%2d", tick_time / 60);
             printText(x - 4, MAIN_PLOT_Y_BTM + 3, &GUI::font_teletext9, text);
 
-            for(unsigned y = MAIN_PLOT_Y_TOP + 5; y < MAIN_PLOT_Y_BTM; y+= 5)
+            for(unsigned y = MAIN_PLOT_Y_TOP + 5; y < MAIN_PLOT_Y_BTM; y += 5)
                canvas.drawPoint(BLACK, x, y);
          }
          else
@@ -401,12 +401,11 @@ private:
    unsigned draw_cycle{0};
    unsigned vbat{0};
 
-   History<signed,SAMPLES> history_temp;
-   History<signed,7>       history_max_temp;
-   History<signed,7>       history_min_temp;
+   History<signed, SAMPLES> history_temp;
+   History<signed, 7>       history_max_temp;
+   History<signed, 7>       history_min_temp;
 
-   Scale temp_scale{MAIN_PLOT_Y_BTM, MAIN_PLOT_Y_TOP};
-   Scale time_scale{MAIN_PLOT_X_LFT, MAIN_PLOT_X_RGT};
-   Scale wk_temp_scale{SUB_PLOT_Y_BTM, SUB_PLOT_Y_TOP};
+   Axis temp_scale{MAIN_PLOT_Y_BTM, MAIN_PLOT_Y_TOP};
+   Axis time_scale{MAIN_PLOT_X_LFT, MAIN_PLOT_X_RGT};
+   Axis wk_temp_scale{SUB_PLOT_Y_BTM, SUB_PLOT_Y_TOP};
 };
-
