@@ -17,7 +17,7 @@ class History
 public:
    History() = default;
 
-   void push(TYPE value)
+   void push(const TYPE& value)
    {
       assert((head < BUF_SIZE) && (tail < BUF_SIZE));
 

@@ -3,16 +3,16 @@
 // SPDX-License-Identifier: MIT
 //-------------------------------------------------------------------------------
 
-// \brief
+// \brief State for a plot axis
 
 #pragma once
 
-class Scale
+class Axis
 {
 public:
-   Scale(unsigned start_, unsigned end_)
-      : pos_min(start_)
-      , pos_max(end_)
+   Axis(unsigned pos_min_, unsigned pos_max_)
+      : pos_min(pos_min_)
+      , pos_max(pos_max_)
    {
    }
 
@@ -29,6 +29,7 @@ public:
       scale_fp = ((signed(pos_max) - signed(pos_min)) << FIXP_SHIFT) / (val_max - val_min);
    }
 
+   //! Convert a value to a pixel position
    unsigned getPos(signed value_) const
    {
       return pos_min + (((value_ - val_min) * scale_fp) >> FIXP_SHIFT);
@@ -37,10 +38,10 @@ public:
 private:
    static const unsigned FIXP_SHIFT = 16;
 
-   unsigned pos_min;
-   unsigned pos_max;
-   signed   val_min;
-   signed   val_max;
-   signed   scale_fp;
+   const unsigned pos_min;    //!< Minimum pixel position
+   const unsigned pos_max;    //!< Maximum pixel position
+   signed         val_min{};  //!< Minimum value
+   signed         val_max{};  //!< Maximum value
+   signed         scale_fp{};
 };
 
